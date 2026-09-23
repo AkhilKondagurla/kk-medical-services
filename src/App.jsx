@@ -5,8 +5,6 @@ import {
   Paper,
   Grid,
   Stack,
-  Divider,
-  useMediaQuery,
 } from "@mui/material";
 
 import {
@@ -231,6 +229,7 @@ function Header() {
 
           <Box sx={{ minWidth: 0 }}>
             <Typography
+              component="h1"
               sx={{
                 fontFamily:
                   'Georgia, "Times New Roman", serif',
@@ -324,6 +323,7 @@ function ServicesCard() {
         }}
       >
         <Typography
+          component="h2"
           sx={{
             color: "#143d3d",
             fontWeight: 900,
@@ -343,7 +343,7 @@ function ServicesCard() {
         </Typography>
 
         <Stack spacing={{ xs: 0.7, sm: 1, md: 0.7 }}>
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Stack
               key={service.title}
               direction="row"
@@ -549,6 +549,7 @@ function InsuranceCard() {
       </Box>
 
       <Typography
+        component="h2"
         sx={{
           fontFamily:
             '"Brush Script MT", "Segoe Script", cursive',
@@ -861,7 +862,9 @@ function Footer() {
                 }}
               />
 
-              <Typography
+                <Typography
+                  component="a"
+                  href="tel:+919059089983"
                 sx={{
                   color: "#08776c",
                   fontWeight: 900,
@@ -916,6 +919,8 @@ function Footer() {
                 />
 
                 <Typography
+                  component="a"
+                  href="mailto:contact@kkmedical.com"
                   sx={{
                     fontSize: {
                       xs: 14,
@@ -926,7 +931,7 @@ function Footer() {
                     wordBreak: "break-word",
                   }}
                 >
-                  mailto:contact@kkmedical.com
+                  contact@kkmedical.com
                 </Typography>
               </Stack>
 
@@ -946,6 +951,8 @@ function Footer() {
                 />
 
                 <Typography
+                  component="a"
+                  href="https://www.kkmedical.com"
                   sx={{
                     fontSize: {
                       xs: 14,
